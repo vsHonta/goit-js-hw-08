@@ -9,7 +9,7 @@ function timeUpdate(evt) {
     localStorage.setItem('videoplayer-current-time', JSON.stringify(evt))
 }
 
-player.on('timeupdate', throttle(timeUpdate, 500)  );
+player.on('timeupdate', throttle(timeUpdate, 1000)  );
 
 player.getVideoTitle().then(function (title) {
     console.log('title:', title);
